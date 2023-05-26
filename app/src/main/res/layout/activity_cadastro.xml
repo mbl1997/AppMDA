@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background"
+    tools:context=".FormCadastro">
+
+    <TextView
+        android:id="@+id/title_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/title_cadastro"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/containerComponents"
+        style="@style/ContainerComponents"
+        android:layout_width="417dp"
+        android:layout_height="519dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_cadastro" />
+
+    <EditText
+        android:id="@+id/edit_nome"
+        style="@style/Edit_Text"
+        android:hint="Nome:"
+        android:drawableRight="@drawable/ic_user"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents"
+        app:layout_constraintEnd_toStartOf="@id/containerComponents"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        tools:layout_editor_absoluteY="140dp"></EditText>
+
+    <EditText
+        android:id="@+id/edit_email"
+        style="@style/Edit_Text"
+        android:hint="E-mail:"
+        android:drawableRight="@drawable/ic_email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@id/edit_nome"
+        app:layout_constraintEnd_toStartOf="@id/containerComponents"
+        app:layout_constraintHorizontal_bias="0.604"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        tools:layout_editor_absoluteY="218dp"></EditText>
+
+    <EditText
+        android:id="@+id/edit_senha"
+        style="@style/Edit_Text"
+        android:hint="Senha:"
+        android:drawableRight="@drawable/ic_eye"
+        android:inputType="numberPassword"
+        app:layout_constraintEnd_toEndOf="@id/edit_email"
+        app:layout_constraintEnd_toStartOf="@id/containerComponents"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        tools:layout_editor_absoluteY="298dp"></EditText>
+
+    <EditText
+        android:id="@+id/edit_phone"
+        style="@style/Edit_Text"
+        android:hint="Telefone:"
+        android:drawableRight="@drawable/ic_phone"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@id/edit_senha"
+        app:layout_constraintEnd_toStartOf="@id/containerComponents"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        tools:layout_editor_absoluteY="382dp"></EditText>
+
+    <RadioButton
+        android:id="@+id/radio_mas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Masculino "
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="154dp"
+        tools:layout_editor_absoluteY="464dp" />
+
+    <RadioButton
+        android:id="@+id/radio_fem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Feminino"
+        tools:layout_editor_absoluteX="273dp"
+        tools:layout_editor_absoluteY="464dp" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/Button_perfil"
+        android:layout_width="109dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="32dp"
+        android:text="Paciente"
+        app:layout_constraintTop_toBottomOf="@id/radio_mas"
+        tools:layout_editor_absoluteX="147dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/Button_perfil"
+        android:layout_width="109dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="32dp"
+        android:text="Profissional"
+        app:layout_constraintTop_toBottomOf="@id/radio_fem"
+        tools:layout_editor_absoluteX="262dp" />
+
+    <TextView
+        android:id="@+id/text_perfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qual o seu perfil?"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="553dp" />
+
+    <TextView
+        android:id="@+id/text_gen"
+        android:layout_width="105dp"
+        android:layout_height="30dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="Genero:"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="477dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/Button"
+        android:layout_marginTop="10dp"
+        android:text="Cadastrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/containerComponents" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
